@@ -1,0 +1,30 @@
+.containerStyle {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 6rem 3rem 3rem 3rem;
+  background-color: #020617;
+}
+
+ .titleStyle  {
+  color: #a855f7;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.cardStyle {
+  background-color: #2b1b50;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.dateStyle {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: #94a3b8;
+}

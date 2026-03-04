@@ -1,7 +1,9 @@
 .contactWrapper {
-  padding: 8rem 1rem;   
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .contactForm {
@@ -56,4 +58,25 @@
 
 .contactForm button:hover {
   background-color: #631ca6;
+}
+
+.contactForm button:disabled {
+  background-color: #412b59;
+  color: #6b7280;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.contactForm button:disabled:hover {
+  background-color: #412b59;
+}
+
+.successAlert {
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background-color: rgba(168, 85, 247, 0.15);
+  border: 1px solid #a855f7;
+  color: #d8b4fe;
+  font-size: 0.95rem;
 }

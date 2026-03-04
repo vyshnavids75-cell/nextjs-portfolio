@@ -5,11 +5,14 @@ import { createContact } from "../actions/contact";
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+    const [success, setSuccess] = useState(false);
 
     async function handleSubmit(e: React.FormEvent) {
       e.preventDefault();
       await createContact(formData.name, formData.email, formData.message);
-      alert("Message Sent");
+      setSuccess(true);
+      setFormData({ name: "", email: "", message: "" });
+      setTimeout(() => setSuccess(false), 5000);
     }
 
     return (
@@ -28,7 +31,8 @@ export default function ContactForm() {
             onChange={(e) => setFormData({...formData, message: e.target.value})}
             className={styles.contactMessage}
             />
-            <button>Submit</button>
+            <button disabled={!formData.name || !formData.email || !formData.message}>Submit</button>
+            {success && <p className={styles.successAlert}>Message sent!</p>}
         </form>
         </section>
     )

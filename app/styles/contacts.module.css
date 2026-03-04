@@ -27,41 +27,35 @@
 .contactTitle {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #f9fafb;
+  color: #a855f7;
   margin-bottom: 1rem;
 }
 
 .contactIntro {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-top: 2rem;
-  max-width: 720px;
-  font-weight: 500;
-  color: #c4b5fd;
+  font-weight: 600;
+  color: #e9d5ff;
+  text-shadow: 0 0 28px rgba(168, 85, 247, 0.75);
   position: relative;
-  display: inline-block;
   cursor: pointer;
   opacity: 0;
   transform: translateX(-40px);
   animation: contactSlideIn 0.8s ease-out forwards;
   animation-delay: 0.45s;
-  transition: color 0.3s ease;
-}
-
-.contactIntro::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #a855f7, #6366f1);
-  transition: width 0.35s ease;
-  border-radius: 2px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  letter-spacing: 0.02em;
 }
 
 .contactIntro:hover {
-  color: #e9d5ff; 
+  color: #c1a6da;
+  text-shadow: 0 0 18px rgba(168, 85, 247, 0.45);
   text-decoration: underline;
+  cursor: pointer;
+}
+
+.contactLink {
+  color:#f9fafb;
 }
 
 .contactGroup {
@@ -88,7 +82,7 @@
 .contactGroupTitle {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #f9fafb;
+  color: #a855f7;
   margin-bottom: 1.2rem;
 }
 
@@ -105,19 +99,6 @@
   margin-bottom: 0.2rem;
 }
 
-.contactItem a {
-  font-size: 1rem;
-  color: #a855f7;
-  text-decoration: none;
-  position: relative;
-  font-weight: 500;
-}
-
-.contactItem a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  color: #c4b5fd;
-}
 
 .contactLocation {
   font-size: 1rem;

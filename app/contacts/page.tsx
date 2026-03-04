@@ -8,7 +8,7 @@ export default function Contacts() {
                 <h4 className={styles.contactTitle}>Primary Contact Information</h4>
                 <div className={styles.contactItem}>
                     <span className={styles.contactLabel}>Email</span>
-                    <Link href="mailto:vyshnavids75@gmail.com">
+                    <Link href="mailto:vyshnavids75@gmail.com" className={styles.contactLink}>
                         vyshnavids75@gmail.com
                     </Link>
                 </div>
@@ -19,10 +19,11 @@ export default function Contacts() {
 
                 <div className={styles.contactItem}>
                     <span className={styles.contactLabel}>LinkedIn</span>
-                    <Link
+                    <Link 
                         href="https://www.linkedin.com/in/vyshnavids"
                         target="_blank"
                         rel="noreferrer"
+                        className={styles.contactLink}
                     >
                         https://www.linkedin.com/in/vyshnavids
                     </Link>
@@ -30,10 +31,11 @@ export default function Contacts() {
 
                 <div className={styles.contactItem}>
                     <span className={styles.contactLabel}>GitHub</span>
-                    <Link
+                    <Link 
                         href="https://github.com/vyshnavids75-cell"
                         target="_blank"
                         rel="noreferrer"
+                        className={styles.contactLink}
                     >
                         https://github.com/vyshnavids75-cell
                     </Link>
