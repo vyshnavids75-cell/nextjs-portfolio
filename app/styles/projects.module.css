@@ -1,0 +1,247 @@
+.projectSection {
+  margin-left: 0;
+  padding: 5rem 3rem 0rem;
+  background-color: #020617;
+  height: calc(100vh - 1.5rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.projectsHeading {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0;
+  background: linear-gradient(120deg, #e5e7eb, #a855f7, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.projectsContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  min-height: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectsContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.projectsContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projectsContainer::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border-radius: 999px;
+}
+
+.projectsContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+}
+
+.featuredProject {
+  margin-bottom: 2rem;
+}
+
+.featuredCard {
+  border-left: 6px solid #a855f7;
+  background: linear-gradient(135deg, #020617, #111827);
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.projectCard {
+  position: relative;
+  background: radial-gradient(circle at top left, rgba(88, 28, 135, 0.32), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(8, 47, 73, 0.36), transparent 60%),
+              #020617;
+  padding: 1.4rem 2.1rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  border: 1px solid #374151;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: projectsSlideIn 0.8s ease-out forwards;
+}
+
+.projectCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border-top: 1px solid rgba(248, 250, 252, 0.06);
+  border-left: 1px solid rgba(248, 250, 252, 0.03);
+  pointer-events: none;
+}
+
+.projectCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+.featuredProject .project-card {
+  animation-delay: 0s;
+}
+
+.projectsGrid .project-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.projectsGrid .project-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.projectsGrid .project-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+.projectCard h3 {
+  font-size: 1.35rem;
+  color: #e5e7eb;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.02em;
+}
+
+.projectMeta {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 0.4rem;
+}
+
+.projectTech {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.projectDesc {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.projectCard ul {
+  padding-left: 1.2rem;
+}
+
+.projectCard li {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes projectsSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.footerSection {
+  margin-top: -3rem;
+}
+
+@media (max-width: 1024px) {
+  .projectSection {
+    padding: 5rem 2.5rem 3rem;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  .projectsHeading {
+    font-size: 2.1rem;
+    letter-spacing: 0.06em;
+  }
+
+  .projectsContainer {
+    min-height: auto;
+    padding-right: 0;
+  }
+
+  .projectsGrid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectSection {
+    padding: 5rem 1.75rem 3rem;
+  }
+
+  .projectsHeading {
+    font-size: 1.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .projectCard {
+    padding: 1.25rem 1.6rem;
+  }
+
+  .projectCard h3 {
+    font-size: 1.25rem;
+  }
+
+  .projectDesc {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectSection {
+    padding: 5rem 1.25rem 3rem;
+  }
+
+  .projectsHeading {
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+  }
+
+  .projectCard {
+    padding: 1.1rem 1.3rem;
+    border-radius: 14px;
+  }
+
+  .projectCard h3 {
+    font-size: 1.15rem;
+  }
+
+  .projectMeta,
+  .projectTech {
+    font-size: 0.85rem;
+  }
+
+  .projectDesc,
+  .projectsCard li {
+    font-size: 0.85rem;
+  }
+}
