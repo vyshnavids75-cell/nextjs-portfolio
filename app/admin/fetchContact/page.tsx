@@ -1,6 +1,8 @@
 import { fetchContact } from "@/app/actions/contact";
 import styles from "@/app/styles/fetchContact.module.css"
 
+export const dynamic = 'force-dynamic';
+
 export default async function fetchContactPage() {
     const contacts = await fetchContact();
 
